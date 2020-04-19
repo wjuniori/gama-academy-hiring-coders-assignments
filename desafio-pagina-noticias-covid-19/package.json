@@ -1,0 +1,42 @@
+{
+  "title": "desafio-pagina-noticias-covid-19",
+  "name": "desafio-pagina-noticias-covid-19",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node_modules/.bin/gulp watch"
+  },
+  "description": "Dependencies and DevDependencies of the desafio-pagina-noticias-covid-19 website",
+  "keywords": [
+    "desafio-pagina-noticias-covid-19",
+    "",
+    "",
+    ""
+  ],
+  "homepage": "https://wjuniori.github.io/desafio-pagina-noticias-covid-19/",
+  "bugs": {
+    "url": "https://github.com/wjuniori/desafio-pagina-noticias-covid-19/issues",
+    "email": "wjuniori.si@gmail.com"
+  },
+  "license": "",
+  "author": "Washington Júnior (wjuniori.si@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjuniori/desafio-pagina-noticias-covid-19.git"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-header": "^2.0.9",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0"
+  }
+}
