@@ -90,11 +90,8 @@ body {
   border-bottom: 1px solid;
 }
 
-.navbar-logo {
+.logo {
   font-size: 70px;
-}
-
-.navbar-logo i:hover {
   color: #e4bb2a;
 }
 
@@ -184,4 +181,35 @@ main {
 
 .news .video iframe {
   border-radius: 15px;
+}
+
+/* ********** FOOTER ********** */
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+footer i {
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  font-size: smaller;
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+footer p:last-child {
+  margin-bottom: 0;
+}
+
+footer a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
