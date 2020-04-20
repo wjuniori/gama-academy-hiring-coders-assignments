@@ -35,12 +35,32 @@ body {
   margin: 0;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.list-icons li {
+  margin-right: 24px;
+  font-size: 40px;
 }
 
-.yellow {
+.list-icons li:last-child {
+  margin-right: 0;
+}
+
+.list-icons a {
   color: #e4bb2a;
+  text-decoration: none;
+}
+
+.list-icons i {
+  color: #e4bb2a;
+}
+
+.logo:hover,
+.list-icons a:hover,
+.list-icons i:hover {
+  color: #bc9a21;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 /* ********** HEADER ********** */
@@ -60,15 +80,6 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.hero-image a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.hero-image a:hover {
-  color: #e4bb2a;
 }
 
 .content-header {
@@ -110,16 +121,19 @@ body {
   justify-content: center;
   align-items: center;
 
+  color: #fff;
+  text-decoration: none;
   border-bottom: 2px solid transparent;
 }
 
 .navbar-menu a:hover {
-  border-bottom: 2px solid #e4bb2a;
+  color: #bc9a21;
+  border-bottom: 2px solid #bc9a21;
 }
 
-.hero-image .active {
-  color: #e4bb2a;
-  border-bottom: 2px solid #e4bb2a;
+.navbar-menu .active {
+  color: #bc9a21;
+  border-bottom: 2px solid #bc9a21;
 }
 
 .hero-text {
@@ -129,6 +143,7 @@ body {
 .hero-text h1 {
   font-size: 50px;
   margin: 0;
+  color: #e4bb2a;
 }
 
 /* ********** MAIN ********** */
@@ -154,7 +169,17 @@ main {
 }
 
 .news h3 {
-  margin: 0;
+  margin-top: 0;
+}
+
+.news img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  float: left;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 7px solid #f2f2f2;
 }
 
 .news .btn-primary {
@@ -192,13 +217,13 @@ footer {
 }
 
 footer i {
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }
 
 footer p {
   font-size: smaller;
   margin: 0;
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
 }
 
 footer p:last-child {
