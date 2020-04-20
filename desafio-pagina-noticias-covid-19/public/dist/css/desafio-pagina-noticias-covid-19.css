@@ -63,6 +63,22 @@ body {
   text-transform: uppercase;
 }
 
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+textarea {
+  height: 200px;
+}
+
 /* ********** HEADER ********** */
 
 .hero-image {
