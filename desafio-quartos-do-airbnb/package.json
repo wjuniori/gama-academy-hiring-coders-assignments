@@ -1,0 +1,44 @@
+{
+  "title": "desafio-quartos-do-airbnb",
+  "name": "desafio-quartos-do-airbnb",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node_modules/.bin/gulp watch"
+  },
+  "description": "Dependencies and DevDependencies of the desafio-quartos-do-airbnb website",
+  "keywords": [
+    "desafio-quartos-do-airbnb",
+    "",
+    "",
+    ""
+  ],
+  "homepage": "https://wjuniori.github.io/gama-academy-hiring-coders-assignments/desafio-quartos-do-airbnb/",
+  "bugs": {
+    "url": "https://github.com/wjuniori/gama-academy-hiring-coders-assignments/desafio-quartos-do-airbnb/issues",
+    "email": "wjuniori.si@gmail.com"
+  },
+  "license": "",
+  "author": "Washington Júnior (wjuniori.si@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjuniori/gama-academy-hiring-coders-assignments/desafio-quartos-do-airbnb.git"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-header": "^2.0.9",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0"
+  }
+}
