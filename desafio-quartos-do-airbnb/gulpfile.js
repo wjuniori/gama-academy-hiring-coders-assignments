@@ -50,25 +50,10 @@ function cleanVendor() {
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
-  // normalize.css
-  const normalize = gulp
-    .src("./node_modules/normalize.css/normalize.css")
-    .pipe(gulp.dest("./vendor/normalize.css"));
-
   // Bootstrap
   const bootstrap = gulp
     .src("./node_modules/bootstrap/dist/**/*")
     .pipe(gulp.dest("./vendor/bootstrap"));
-
-  // Font Awesome CSS
-  const fontAwesomeCSS = gulp
-    .src("./node_modules/@fortawesome/fontawesome-free/css/**/*")
-    .pipe(gulp.dest("./vendor/fontawesome-free/css"));
-
-  // Font Awesome Webfonts
-  const fontAwesomeWebfonts = gulp
-    .src("./node_modules/@fortawesome/fontawesome-free/webfonts/**/*")
-    .pipe(gulp.dest("./vendor/fontawesome-free/webfonts"));
 
   // jQuery
   const jquery = gulp
@@ -78,13 +63,7 @@ function modules() {
     ])
     .pipe(gulp.dest("./vendor/jquery"));
 
-  return mergeStream(
-    normalize,
-    bootstrap,
-    fontAwesomeCSS,
-    fontAwesomeWebfonts,
-    jquery
-  );
+  return mergeStream(bootstrap, jquery);
 }
 
 // Clean img
@@ -163,7 +142,7 @@ function browserSyncReload(done) {
 // Watch files
 function watchFiles() {
   gulp.watch(cssFiles, css);
-  gulp.watch(jsFiles, js);
+  // gulp.watch(jsFiles, js);
   gulp.watch(imgFiles, build);
 
   // Caso não tenha uma task definida:
@@ -175,7 +154,7 @@ const vendor = gulp.series(cleanVendor, modules);
 const img = gulp.series(cleanImg, imageMin);
 const build = gulp.series(
   gulp.parallel(vendor, img),
-  gulp.parallel(css, js) /*, html*/
+  gulp.parallel(css) /*, js, html*/
 );
 const watch = gulp.series(build, gulp.parallel(browserSync, watchFiles));
 
@@ -183,6 +162,6 @@ const watch = gulp.series(build, gulp.parallel(browserSync, watchFiles));
 exports.default = build;
 exports.watch = watch;
 exports.css = css;
-exports.js = js;
+// exports.js = js;
 exports.img = img;
 exports.vendor = vendor;

@@ -24,10 +24,8 @@
     "url": "git+https://github.com/wjuniori/gama-academy-hiring-coders-assignments/desafio-quartos-do-airbnb.git"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.5.1",
-    "normalize.css": "^8.0.1"
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

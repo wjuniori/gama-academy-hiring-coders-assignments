@@ -3,3 +3,4 @@
  * Copyright 2020 Washington Júnior (wjuniori.si@gmail.com)
  */
 
+#cards{display:flex;flex-wrap:wrap;justify-content:center}
