@@ -6,10 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function getData() {
     const URL = "https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72";
-    const results = await fetch(URL)
-      .then((r) => r.json())
-      .then((json) => json);
-    return results;
+    // const results = await fetch(URL)
+    //   .then((r) => r.json())
+    //   .then((json) => json);
+    // return results;
+    const resp = await fetch(URL);
+    const json = await resp.json();
+    return json;
   }
 
   function renderCards(cards) {
