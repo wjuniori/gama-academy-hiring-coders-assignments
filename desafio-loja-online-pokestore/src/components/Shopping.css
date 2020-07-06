@@ -1,0 +1,10 @@
+.shopping {
+  padding: 20px;
+}
+
+/* Medium ≥768px */
+@media (min-width: 768px) {
+  .shopping {
+    width: 30%;
+  }
+}

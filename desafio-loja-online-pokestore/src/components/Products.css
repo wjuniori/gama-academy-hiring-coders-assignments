@@ -1,0 +1,13 @@
+.products {
+  padding: 20px;
+}
+
+/* Medium ≥768px */
+@media (min-width: 768px) {
+  .products {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shanti&display=swap");
+
+.cart {
+  border: 1px solid #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cart__header {
+  font-family: "Yeseva One", cursive;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.cart__sum {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart__button {
+  display: inline-block;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #c4c4c4;
+  font-family: "Shanti", sans-serif;
+}

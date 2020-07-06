@@ -1,0 +1,13 @@
+.topnav {
+  background-color: #000;
+}
+
+.topnav__content {
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.topnav__title {
+  margin: 0;
+}
