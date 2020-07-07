@@ -2,10 +2,10 @@ import React from "react";
 import Cart from "./Cart";
 import "./Shopping.css";
 
-const Shopping = () => {
+const Shopping = ({ data }) => {
   return (
     <section className="shopping">
-      <Cart />
+      <Cart data={data} />
     </section>
   );
 };

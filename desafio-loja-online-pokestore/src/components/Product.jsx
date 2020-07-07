@@ -1,9 +1,13 @@
 import React from "react";
 import "./Product.css";
 
-const Product = ({ data }) => {
+const Product = ({ data, onClick }) => {
+  const handleClick = () => {
+    onClick(data);
+  };
+
   return (
-    <article className="product">
+    <article className="product" onClick={handleClick}>
       <div className="product__header">
         <img
           className="product__image"

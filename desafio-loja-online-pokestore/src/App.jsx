@@ -10,6 +10,7 @@ import Loading from "./components/Loading";
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -20,9 +21,9 @@ function App() {
         setProducts(
           json.results.map((result) => {
             return {
-              id: result.url.split("/")[6],
+              id: parseInt(result.url.split("/")[6]),
               name: result.name,
-              price: result.url.split("/")[6],
+              price: parseInt(result.url.split("/")[6]),
             };
           })
         );
@@ -38,6 +39,10 @@ function App() {
       });
   }, []);
 
+  const handleClick = (product) => {
+    setCart([...cart, product]);
+  };
+
   return (
     <>
       <Topnav />
@@ -47,8 +52,8 @@ function App() {
             <Loading />
           ) : (
             <div className="row">
-              <Products data={products} />
-              <Shopping />
+              <Products data={products} onClick={handleClick} />
+              <Shopping data={cart} />
             </div>
           )}
         </Container>
