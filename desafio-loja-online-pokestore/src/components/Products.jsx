@@ -2,16 +2,12 @@ import React from "react";
 import Product from "./Product";
 import "./Products.css";
 
-const Products = () => {
-  const pokemonData = {
-    id: 1,
-    name: "bulbasaur",
-    price: 30.0,
-  };
-
+const Products = ({ data }) => {
   return (
     <section className="products">
-      <Product data={pokemonData} />
+      {data.map((currentData) => (
+        <Product key={currentData.id} data={currentData} />
+      ))}
     </section>
   );
 };
