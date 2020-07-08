@@ -2,10 +2,10 @@ import React from "react";
 import Cart from "./Cart";
 import "./Shopping.css";
 
-const Shopping = ({ data }) => {
+const Shopping = ({ data, onClick }) => {
   return (
     <section className="shopping">
-      <Cart data={data} />
+      <Cart data={data} onClick={onClick} />
     </section>
   );
 };

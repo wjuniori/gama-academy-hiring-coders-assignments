@@ -27,3 +27,11 @@
   background-color: #c4c4c4;
   font-family: "Shanti", sans-serif;
 }
+
+.cart__button--disabled {
+  cursor: default;
+}
+
+.cart__button--enabled {
+  cursor: pointer;
+}

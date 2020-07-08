@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import CartProduct from "./CartProduct";
 
-const Cart = ({ data }) => {
+const Cart = ({ data, onClick }) => {
+  const [disabledButton, setDisabledButton] = useState(true);
+
+  useEffect(() => {
+    setDisabledButton(!data.length);
+  }, [data]);
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    onClick(data.length);
+  };
+
   return (
     <article className="cart">
       <div className="cart__header">
         <h2>Carrinho</h2>
       </div>
       <div className="cart__body">
-        {data.map((currentData) => (
-          <CartProduct key={currentData.id} data={currentData} />
+        {data.map((currentData, index) => (
+          <CartProduct key={index} data={currentData} />
         ))}
       </div>
       <div className="cart__footer">
@@ -20,7 +31,15 @@ const Cart = ({ data }) => {
             return sum + currentData.price;
           }, 0)}`}</span>
         </div>
-        <button className="cart__button">FINALIZAR</button>
+        <button
+          className={`cart__button ${
+            disabledButton ? "cart__button--disabled" : "cart__button--enabled"
+          }`}
+          disabled={disabledButton}
+          onClick={handleClick}
+        >
+          FINALIZAR
+        </button>
       </div>
     </article>
   );

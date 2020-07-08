@@ -6,11 +6,13 @@ import Products from "./components/Products";
 import Shopping from "./components/Shopping";
 import { URL } from "./constants";
 import Loading from "./components/Loading";
+import Modal from "./components/Modal";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [visibleModal, setVisibleModal] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -39,8 +41,16 @@ function App() {
       });
   }, []);
 
-  const handleClick = (product) => {
+  const handleClickProducts = (product) => {
     setCart([...cart, product]);
+  };
+
+  const handleClickShopping = (visible) => {
+    setVisibleModal(visible);
+  };
+
+  const handleClickModal = () => {
+    setCart([]);
   };
 
   return (
@@ -52,12 +62,13 @@ function App() {
             <Loading />
           ) : (
             <div className="row">
-              <Products data={products} onClick={handleClick} />
-              <Shopping data={cart} />
+              <Products data={products} onClick={handleClickProducts} />
+              <Shopping data={cart} onClick={handleClickShopping} />
             </div>
           )}
         </Container>
       </main>
+      <Modal visible={visibleModal} onClick={handleClickModal} />
     </>
   );
 }

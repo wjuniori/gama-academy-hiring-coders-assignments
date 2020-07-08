@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Shanti&display=swap");
+
+/* Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal--hidden {
+  display: none; /* Hidden */
+}
+
+.modal--visible {
+  display: block; /* Visible */
+}
+
+/* Modal Content/Box */
+.modal__content {
+  background-color: #f2f2f2;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #d5d5d7;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  font-family: "Shanti", sans-serif;
+}
+
+/* Medium ≥768px */
+@media (min-width: 768px) {
+  .modal__content {
+    width: 40%;
+  }
+}
+
+.modal__btn {
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background-color: #c4c4c4;
+}
