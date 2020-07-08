@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Cart.css";
 import CartProduct from "./CartProduct";
 
 const Cart = ({ data, onClick }) => {
-  const [disabledButton, setDisabledButton] = useState(true);
-
-  useEffect(() => {
-    setDisabledButton(!data.length);
-  }, [data]);
-
   const handleClick = (event) => {
     event.preventDefault();
     onClick(data.length);
@@ -32,10 +26,8 @@ const Cart = ({ data, onClick }) => {
           }, 0)}`}</span>
         </div>
         <button
-          className={`cart__button ${
-            disabledButton ? "cart__button--disabled" : "cart__button--enabled"
-          }`}
-          disabled={disabledButton}
+          className={`cart__button ${!data.length && "cart__button--disabled"}`}
+          disabled={!data.length}
           onClick={handleClick}
         >
           FINALIZAR

@@ -50,6 +50,7 @@ function App() {
   };
 
   const handleClickModal = () => {
+    setVisibleModal(false);
     setCart([]);
   };
 
